@@ -4,13 +4,11 @@
   "description": "Aplicacion de Pruebas",
   "dependencies": {
     "jquery": "latest",
-	"bootstrap": "latest",
     "bootstrap-sass": "latest",
     "font-awesome": "latest",
     "html5shiv": "latest",
     "respond": "latest",
     "animate.css": "latest",
-    "WOW": "latest",
-	"videojs": "latest"
+    "WOW": "latest"
   }
 }

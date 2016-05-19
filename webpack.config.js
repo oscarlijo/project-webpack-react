@@ -1,5 +1,6 @@
 var webpack = require("webpack");
 var BowerWebpackPlugin = require('bower-webpack-plugin');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: "./entry.js",
@@ -22,11 +23,11 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                loaders: ["style", "css", "sass"]
+                  loader: ExtractTextPlugin.extract("style", "css!sass")
             },
             {
                 test: /\.css$/,
-                loaders: [ 'style', 'css']
+                loaders: ['style', 'css']
             },
             {
                 test   : /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
@@ -41,6 +42,10 @@ module.exports = {
         new webpack.ProvidePlugin({
           $:      "jquery",
           jQuery: "jquery"
+        }),
+        new ExtractTextPlugin("estilos.css"),
+        new webpack.optimize.UglifyJsPlugin({
+          compress: { warnings: false }
         })
     ]
 };
