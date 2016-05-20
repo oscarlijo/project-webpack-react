@@ -9,6 +9,8 @@
     "html5shiv": "latest",
     "respond": "latest",
     "animate.css": "latest",
-    "WOW": "latest"
+    "WOW": "latest",
+    "videojs": "latest",
+    "isInViewport": "latest"
   }
 }
